@@ -1,25 +1,9 @@
-<div id="app">
-    <h1>{{ message }}</h1>
-    <h2>{{ sort_key }}</h2>
-    <tr>
-        <th @click="sortBy('id')">Id</th>
-        <th @click="sortBy('price')">price</th>
-    </tr>
-</div>
-
-<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
-<script>
-    new Vue({
-        el : "#app",
-        data : {
-            message: "Sort Column In Table",
-            users:[],
-            sort_key:"",
-        },
-        methods: {
-            sortBy(key){
-                this.sort_key = key;
-            }
-        }
-    });
-</script>
+            <?php
+            //sort文書き足し
+                $sql = "select * from product";
+                if($_GET["sort"] == "ASC" && $_GET["karamu"] == "pri"){
+                    $sql = "select * from product where name like :keyword ORDER BY price ASC";
+                } else if($_GET["sort"] == "DESC" && $_GET["karamu"] == "pri"){
+                    $sql = "select * from product where name like :keyword ORDER BY price DESC";
+                }
+            ?>

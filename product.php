@@ -17,14 +17,16 @@
 		<input type="submit" value="検索">
 	</form>
 	<hr>
-	<?php require 'sort.php'; ?>
 	<table>
-		<th>商品番号</th>
-		<th>商品名</th>
-		<th>価格</th>
+	<tr>
+		<th scope="col">商品番号<a href="sort.php?sort=ASC&karamu=id">↓</a><a href="sort.php?sort=DESC&karamu=id">↑</a></th></th>
+		<th scope="col">商品名<a href="sort.php?sort=ASC&karamu=vegi">↓</a><a href="sort.php?sort=DESC&karamu=vegi">↑</a></th>
+		<th scope="col">値段<a href="product.php?sort=ASC&karamu=pri">↓</a><a href="product.php?sort=DESC&karamu=pri">↑</a></th>
+		</tr>
 		<?php
 		//MySQLデータベースに接続する
 		require 'db_connect.php';
+		require 'sort.php';
 		//検索の判断
 		if (isset($_POST['keyword'])) {
 			//SQL文を作る（プレースホルダを使った式）
