@@ -17,15 +17,7 @@
 		<input type="submit" value="検索">
 	</form>
 	<hr>
-
-	<form action="product.php" method="post">
-	<select name='sort'>
-	<option name="ph">値段が高い順</option>
-	<option name="pl">値段が低い順</option>
-	</select>
-	<input type="submit" value="send">
-	</form>
-
+	<?php require 'sort.php'; ?>
 	<table>
 		<th>商品番号</th>
 		<th>商品名</th>
