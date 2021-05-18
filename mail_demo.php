@@ -11,19 +11,18 @@
 <form action="mail_input.php" method="post">
     <div>
       <label>お名前</label>
-      <input type="text"　name="name" value="">
+      <input type="text" value="" name="name">
     </div>
     <div>
       <label>メールアドレス</label>
-      <input type="text"　name="email" value="">
+      <input type="text" value="" name="email">
     </div>
     <div>
       <label>ご意見</label>
-      <textarea rows="10" cols="60" name="opinion">
-      ご意見をご記入ください。
+      <textarea rows="5" cols="30" name="opinion">
       </textarea>
     </div>
-    <input type="submit" value="送信">
+    <input type="submit" value="送信" name="btn_conform">
 </form>
 </body>
 </html>
